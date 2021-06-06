@@ -34,6 +34,8 @@ public class Main {
 //        PokemonManager pokemonManager = new PokemonManager();
 //        pokemonManager.pokemonCreator();
 
+        MenuSystem battleSystem = new MenuSystem();
+        battleSystem.userInput();
 
     }
 }
