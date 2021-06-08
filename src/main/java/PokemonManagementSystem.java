@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class PokemonManagementSystem {
     private ArrayList<Pokemon> pokemons = new ArrayList<>();
 
-    public void pokemonCreator() {
+    private void pokemonCreator() {
         Pokemon pokemon1 = new Pokemon("Pikachu", 100);
         Pokemon pokemon2 = new Pokemon("Charizard", 100);
         Pokemon pokemon3 = new Pokemon("Eevee", 100);
@@ -25,12 +25,13 @@ public class PokemonManagementSystem {
         pokemons.add(pokemon8);
         pokemons.add(pokemon9);
         pokemons.add(pokemon10);
+    }
 
-        int index = (int)(Math.random() * pokemons.size());
+    public void randomPokemonPicker() {
+        pokemonCreator();
+        int index = (int) (Math.random() * pokemons.size());
 
         System.out.println("A wild pokemon appeared :"
                 + pokemons.get(index).pokemonInfo());
-
-
     }
 }

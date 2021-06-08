@@ -35,7 +35,7 @@ public class Main {
 //        pokemonManager.pokemonCreator();
 
         PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
-        pokemonManagementSystem.pokemonCreator();
+        pokemonManagementSystem.randomPokemonPicker();
 
     }
 }
