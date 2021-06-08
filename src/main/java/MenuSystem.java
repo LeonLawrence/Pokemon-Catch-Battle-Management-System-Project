@@ -8,9 +8,9 @@ public class MenuSystem {
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
 
     public void startMenu() {
-            System.out.println("Type in 1, CATCH WILD POKEMON \nType in 2, DISPLAY INVENTORY \nType in 3, BATTLE");
+        System.out.println("Type in 1, CATCH WILD POKEMON \nType in 2, DISPLAY INVENTORY \nType in 3, BATTLE");
         while (true) {
-        String text = scanner.next();
+            String text = scanner.next();
             if (text.equalsIgnoreCase("1")) {
                 System.out.println("Looking for  wild Pokemon ... ");
                 pokemonManagementSystem.randomPokemonPicker();
