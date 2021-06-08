@@ -36,6 +36,9 @@ public class Main {
 
         PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
         pokemonManagementSystem.randomPokemonPicker();
+        System.out.println();
+        MenuSystem menuSystem = new MenuSystem();
+        menuSystem.startMenu();
 
     }
 }
