@@ -33,10 +33,9 @@ public class Main {
 //
 //        PokemonManager pokemonManager = new PokemonManager();
 //        pokemonManager.pokemonCreator();
+//        pokemonManagementSystem.randomPokemonPicker();      // Testing the Randomisor. It works
+//        PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
 
-        PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
-        pokemonManagementSystem.randomPokemonPicker();
-        System.out.println();
         MenuSystem menuSystem = new MenuSystem();
         menuSystem.startMenu();
 
