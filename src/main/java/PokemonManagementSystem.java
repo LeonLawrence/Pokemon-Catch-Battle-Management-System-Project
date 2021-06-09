@@ -31,7 +31,7 @@ public class PokemonManagementSystem {
         pokemonCreator();
         int index = (int) (Math.random() * pokemons.size());
 
-        System.out.println("A wild pokemon appeared :"
+        System.out.println("A wild pokemon appeared: "
                 + pokemons.get(index).pokemonInfo());
     }
 }
