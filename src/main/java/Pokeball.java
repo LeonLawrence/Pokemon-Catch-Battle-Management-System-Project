@@ -1,27 +1,23 @@
 import java.util.ArrayList;
 
 public class Pokeball {
-    ArrayList<Pokemon> pokemons = new ArrayList<>();
-
-    private int counter;
+    private Pokemon pokemon;
 
     public void catchPokemon(Pokemon pokemon) {
-        if (counter == 0) {
-            pokemons.add(pokemon);
-            counter++;
+        if (this.pokemon == null) {
+            this.pokemon = pokemon;
             System.out.println("POKEMON STORED IN POKEBALL: " + pokemon.pokemonInfo());
-        } else if (counter == 1) {
+        } else {
             System.out.println("POKEBALL FULL, USE ANOTHER POKEBALL");
 
         }
     }
 
     public void releasePokemon(Pokemon pokemon) {
-        if (counter == 1) {
-            pokemons.remove(pokemon);
+        if (pokemon != null) {
+            pokemon = null;
             System.out.println("Pokemon Released: " + pokemon.pokemonInfo());
-            counter--;
-        } else if (counter == 0)
+        } else
             System.out.println("There was nothing in the Pokeball to release");
     }
 }
