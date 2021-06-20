@@ -9,14 +9,9 @@ public class PokemonManagementSystem {
     private Pokeball pokeBall2 = new Pokeball();
     private Pokeball pokeBall3 = new Pokeball();
     private Randomisor randomisor = new Randomisor();
-    //    private Pokeball pokeBall2 = new Pokeball();
     private MenuSystem menuSystem;
 
     public void pokemonCreator() {
-//        while(true) {
-//            pokemons.add(new Pokemon("Pikachu", 100));
-//            System.out.println(pokemons.size());
-//        }
 
         Pokemon pokemon1 = new Pokemon("Pikachu", 100);
         Pokemon pokemon2 = new Pokemon("Charizard", 100);
@@ -46,7 +41,6 @@ public class PokemonManagementSystem {
         pokemonCreator();
         randomisor.randomPokemonPicker(this);
         getPokemonDetails();
-//        bag1.addPokeball(pokeBall1);
 //        System.out.println("Pokemon size: " + pokemons.size());
 //        System.out.println("A wild pokemon appeared: " + pokemons.get(index).pokemonInfo());
 
@@ -58,6 +52,9 @@ public class PokemonManagementSystem {
 //        System.out.println("Pokemon size: " + pokemons.size());
     }
 
+    public void addPokeballToBag() {
+        bag1.addPokeball(pokeBall1);
+    }
 
     public void displayInventory() {
         bag1.showPokeballInBag();

@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Pokeball {
     private Pokemon pokemon;
+    private Bag bag1;
 
     public void catchPokemon(Pokemon pokemon) {
         if (this.pokemon == null) {
@@ -20,4 +21,5 @@ public class Pokeball {
         } else
             System.out.println("There was nothing in the Pokeball to release");
     }
+
 }

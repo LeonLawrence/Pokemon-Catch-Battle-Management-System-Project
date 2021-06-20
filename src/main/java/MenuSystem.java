@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class MenuSystem {
     private Scanner scanner = new Scanner(System.in);
+    private Pokeball pokeball = new Pokeball();
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
     private Randomisor randomisor = new Randomisor();
 
@@ -14,7 +15,6 @@ public class MenuSystem {
             if (text.equalsIgnoreCase("1")) {
                 System.out.println("Looking for  wild Pokemon ... ");
                 pokemonManagementSystem.findRandomPokemon();
-                pokemonManagementSystem.displayInventory();
                 pokemonCatchMenu();
             } else if (text.equalsIgnoreCase("2")) {
                 System.out.println("displaying everything inside bag");
@@ -32,6 +32,7 @@ public class MenuSystem {
         String text = scanner.next();
         if (text.equals("1")) {
             System.out.println("Pokemon Captured and placed in INVENTORY");
+            pokemonManagementSystem.addPokeballToBag();
             startMenu();
         } else if (text.equals("2")) {
             startMenu();
