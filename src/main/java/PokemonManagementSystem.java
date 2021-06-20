@@ -2,6 +2,7 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class PokemonManagementSystem {
+    private int index;
     public ArrayList<Pokemon> pokemons = new ArrayList<>();
     private Bag bag1 = new Bag();
     private Pokeball pokeBall1 = new Pokeball();
@@ -43,13 +44,27 @@ public class PokemonManagementSystem {
 
     public void findRandomPokemon() {
         pokemonCreator();
-        randomisor.randomPokemonPicker(this); //this was in param
-        bag1.addPokeball(pokeBall1);
+        randomisor.randomPokemonPicker(this);
+        getPokemonDetails();
+//        bag1.addPokeball(pokeBall1);
+//        System.out.println("Pokemon size: " + pokemons.size());
+//        System.out.println("A wild pokemon appeared: " + pokemons.get(index).pokemonInfo());
+
     }
+
+    public void getPokemonDetails() {
+        System.out.println("A wild pokemon appeared: " + pokemons.get(randomisor.getPokemonIndex()).pokemonInfo());
+//        System.out.println("index: " + randomisor.getPokemonIndex());
+//        System.out.println("Pokemon size: " + pokemons.size());
+    }
+
 
     public void displayInventory() {
         bag1.showPokeballInBag();
     }
 
+    public int getPokemonIndexSize() {
+        return pokemons.size();
+    }
 
 }

@@ -9,3 +9,12 @@ public class Main {
 
     }
 }
+
+//class Test {
+//    public static void main(String[] args) {
+//        PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
+//
+//        pokemonManagementSystem.findRandomPokemon();
+//
+//    }
+//}
