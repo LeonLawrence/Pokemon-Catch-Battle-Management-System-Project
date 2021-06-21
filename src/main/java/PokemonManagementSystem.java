@@ -2,17 +2,14 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class PokemonManagementSystem {
-    private int index;
     public ArrayList<Pokemon> pokemons = new ArrayList<>();
     private Bag bag1 = new Bag();
     private Pokeball pokeBall1 = new Pokeball();
     private Pokeball pokeBall2 = new Pokeball();
-    private Pokeball pokeBall3 = new Pokeball();
     private Randomisor randomisor = new Randomisor();
-    private MenuSystem menuSystem;
 
-    public void pokemonCreator() {
-
+    PokemonManagementSystem() {
+        System.out.println("Creaing...");
         Pokemon pokemon1 = new Pokemon("Pikachu", 100);
         Pokemon pokemon2 = new Pokemon("Charizard", 100);
         Pokemon pokemon3 = new Pokemon("Eevee", 100);
@@ -23,7 +20,6 @@ public class PokemonManagementSystem {
         Pokemon pokemon8 = new Pokemon("Gyarados", 100);
         Pokemon pokemon9 = new Pokemon("Jigglypuff", 100);
         Pokemon pokemon10 = new Pokemon("Dragonite", 100);
-        Pokemon pokemon11 = new Pokemon("Dito", 100);
 
         pokemons.add(pokemon1);
         pokemons.add(pokemon2);
@@ -37,24 +33,23 @@ public class PokemonManagementSystem {
         pokemons.add(pokemon10);
     }
 
-    public void findRandomPokemon() {
-        pokemonCreator();
-        randomisor.randomPokemonPicker(this);
-        getPokemonDetails();
-//        System.out.println("Pokemon size: " + pokemons.size());
-//        System.out.println("A wild pokemon appeared: " + pokemons.get(index).pokemonInfo());
-
+    public Pokemon findRandomPokemon() {
+        int pokenIndex = randomisor.randomPokemonPicker(getPokemonIndexSize());
+        return pokemons.get(pokenIndex);
     }
 
     public void getPokemonDetails() {
-        System.out.println("A wild pokemon appeared: " + pokemons.get(randomisor.getPokemonIndex()).pokemonInfo());
-//        System.out.println("index: " + randomisor.getPokemonIndex());
-//        System.out.println("Pokemon size: " + pokemons.size());
+//        System.out.println("A wild pokemon appeared: " + pokemons.get(randomisor.getPokemonIndex()).pokemonInfo());
     }
 
-    public void addPokeballToBag() {
-        bag1.addPokeball(pokeBall1);
+    public void addPokemonToPokeball() {
+//        pokeBall1.catchPokemon();
     }
+
+    public void addPokeballToBag(Pokeball pokeball) {
+        bag1.addPokeball(pokeball);
+    }
+
 
     public void displayInventory() {
         bag1.showPokeballInBag();
@@ -63,5 +58,6 @@ public class PokemonManagementSystem {
     public int getPokemonIndexSize() {
         return pokemons.size();
     }
-
 }
+
+

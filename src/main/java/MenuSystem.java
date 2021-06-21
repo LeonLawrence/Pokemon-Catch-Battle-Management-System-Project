@@ -2,11 +2,7 @@ import java.util.Scanner;
 
 public class MenuSystem {
     private Scanner scanner = new Scanner(System.in);
-    private Pokeball pokeball = new Pokeball();
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
-    private Randomisor randomisor = new Randomisor();
-
-    private Bag bag = new Bag();
 
     public void startMenu() {
         System.out.println("Type in 1, CATCH WILD POKEMON \nType in 2, DISPLAY INVENTORY \nType in 3, BATTLE");
@@ -14,8 +10,12 @@ public class MenuSystem {
             String text = scanner.next();
             if (text.equalsIgnoreCase("1")) {
                 System.out.println("Looking for  wild Pokemon ... ");
-                pokemonManagementSystem.findRandomPokemon();
-                pokemonCatchMenu();
+//                System.out.println();
+                Pokemon pokemon = pokemonManagementSystem.findRandomPokemon();
+                // catch the pokemon
+                Pokeball pokeball = new Pokeball();
+                pokeball.catchPokemon(pokemon);
+                pokemonCatchMenu(pokeball);
             } else if (text.equalsIgnoreCase("2")) {
                 System.out.println("displaying everything inside bag");
                 pokemonManagementSystem.displayInventory();
@@ -27,12 +27,12 @@ public class MenuSystem {
         }
     }
 
-    public void pokemonCatchMenu() {
+    public void pokemonCatchMenu(Pokeball pokeball) {
         System.out.println("Type in 1, CONFIRM\nType in 2, BACK TO MAIN MENU");
         String text = scanner.next();
         if (text.equals("1")) {
             System.out.println("Pokemon Captured and placed in INVENTORY");
-            pokemonManagementSystem.addPokeballToBag();
+            pokemonManagementSystem.addPokeballToBag(pokeball);
             startMenu();
         } else if (text.equals("2")) {
             startMenu();
