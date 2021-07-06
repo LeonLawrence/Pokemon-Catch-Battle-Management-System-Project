@@ -8,7 +8,7 @@ public class Pokeball {
             this.pokemon = pokemon;
             System.out.println("POKEMON STORED IN POKEBALL: " + pokemon.pokemonInfo());
         } else {
-            System.out.println("POKEBALL FULL, USE ANOTHER POKEBALL");
+            System.out.println("POKEBALL FULL");
         }
     }
 
@@ -19,5 +19,9 @@ public class Pokeball {
         } else {
             System.out.println("There was nothing in the Pokeball to release");
         }
+    }
+
+    public void showPokemon() {
+        System.out.println(pokemon.pokemonInfo());
     }
 }

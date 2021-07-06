@@ -32,11 +32,16 @@ public class Bag {
         return pokeballs.size();
     }
 
-public void showPokeballInBag() {
-    System.out.println("X1 Pokemon Licence");
-    System.out.println("X3 Berry's");
-
-    System.out.println("Number of pokeballs in bag: " + numberOfPokeballs());
+    public void showPokeballInBag() {
+        System.out.println("Number of pokeballs in bag: " + numberOfPokeballs());
+        System.out.println();
     }
+
+    public void showPokemon() {
+        for (int i = 0; i < pokeballs.size(); i++) {
+            pokeballs.get(i).showPokemon();
+        }
+    }
+
 
 }

@@ -4,12 +4,9 @@ import java.util.ArrayList;
 public class PokemonManagementSystem {
     public ArrayList<Pokemon> pokemons = new ArrayList<>();
     private Bag bag1 = new Bag();
-    private Pokeball pokeBall1 = new Pokeball();
-    private Pokeball pokeBall2 = new Pokeball();
     private Randomisor randomisor = new Randomisor();
 
     PokemonManagementSystem() {
-        System.out.println("Creaing...");
         Pokemon pokemon1 = new Pokemon("Pikachu", 100);
         Pokemon pokemon2 = new Pokemon("Charizard", 100);
         Pokemon pokemon3 = new Pokemon("Eevee", 100);
@@ -34,16 +31,13 @@ public class PokemonManagementSystem {
     }
 
     public Pokemon findRandomPokemon() {
-        int pokenIndex = randomisor.randomPokemonPicker(getPokemonIndexSize());
-        return pokemons.get(pokenIndex);
+        int pokemonIndex = randomisor.randomPokemonPicker(getPokemonIndexSize());
+        return pokemons.get(pokemonIndex);
     }
 
-    public void getPokemonDetails() {
-//        System.out.println("A wild pokemon appeared: " + pokemons.get(randomisor.getPokemonIndex()).pokemonInfo());
-    }
-
-    public void addPokemonToPokeball() {
-//        pokeBall1.catchPokemon();
+    public void getPokeballPokemonDetails() {
+//            bag1.showPokeballInBag();
+        bag1.showPokemon();
     }
 
     public void addPokeballToBag(Pokeball pokeball) {
@@ -58,6 +52,7 @@ public class PokemonManagementSystem {
     public int getPokemonIndexSize() {
         return pokemons.size();
     }
+
 }
 
 
