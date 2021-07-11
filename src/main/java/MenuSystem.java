@@ -3,6 +3,8 @@ import java.util.Scanner;
 public class MenuSystem {
     private Scanner scanner = new Scanner(System.in);
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
+    private BattleSystem battleSystem = new BattleSystem();
+    private ProgramPauseService programPauseService = new ProgramPauseService();
 
     public void startMenu() {
         System.out.println("Type in 1, CATCH WILD POKEMON \nType in 2, DISPLAY INVENTORY \nType in 3, BATTLE");
@@ -41,17 +43,20 @@ public class MenuSystem {
     }
 
     public void battleStartMenu() {
-        System.out.println("Type in 1, BATTLE RANDOM POKEMON \nType in 2, VIEW POKEMON'S IN YOUR BAG \nType in 3, BACK TO MAIN MENU");
+        System.out.println("Type in 1, CHALLENGE SOMEONE \nType in 2, VIEW POKEMON'S IN YOUR BAG \nType in 3, BACK TO MAIN MENU");
 
         while (true) {
             String text = scanner.next();
             if (text.equalsIgnoreCase("1")) {
                 System.out.println("starting battle system");
-                pokemonManagementSystem.getPokeballPokemonDetails();
-
+                programPauseService.consoleLoadingScreen();
+                System.out.println();
+                System.out.println("You have released your pokemon and they are preparing for battle");
+                battleSystem.releasePokemonToBattle();
 
             } else if (text.equalsIgnoreCase("2")) {
                 pokemonManagementSystem.getPokeballPokemonDetails();
+
             } else if (text.equalsIgnoreCase("3")) {
                 startMenu();
             } else {
@@ -59,6 +64,7 @@ public class MenuSystem {
             }
 
         }
+
 
     }
 }

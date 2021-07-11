@@ -1,7 +1,8 @@
 public class BattleSystem {
 
+    public Pokeball pokeball;
 
-    public void userPokemon(){
+    public void userPokemon() {
         System.out.println("Your Turn To Make A Move");
 
     }
@@ -11,7 +12,16 @@ public class BattleSystem {
 
     }
 
-    public void healthDeduction(Pokemon pokemon) {
+    public void deductHealth() {
 
+    }
+
+    public void releasePokemonToBattle() {
+//        pokeball.releasePokemon();
+    }
+
+    public void deductHealthFromPokemon() {
+        Pokemon pokemon = new Pokemon();
+        pokemon.deductHealth();
     }
 }

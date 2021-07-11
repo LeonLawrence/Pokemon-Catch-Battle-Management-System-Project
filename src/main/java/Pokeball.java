@@ -24,4 +24,5 @@ public class Pokeball {
     public void showPokemon() {
         System.out.println(pokemon.pokemonInfo());
     }
+
 }

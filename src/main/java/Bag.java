@@ -41,6 +41,7 @@ public class Bag {
         for (int i = 0; i < pokeballs.size(); i++) {
             pokeballs.get(i).showPokemon();
         }
+
     }
 
 
