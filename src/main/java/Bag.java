@@ -17,7 +17,7 @@ public class Bag {
         }
     }
 
-    public void removePokeball(Pokeball pokeball) {
+    public Pokeball removePokeball(Pokeball pokeball) {
         if (counter > 0) {
             pokeballs.remove(pokeball);
             counter--;
@@ -26,6 +26,7 @@ public class Bag {
         if (counter == 0) {
             System.out.println("Bag is empty");
         }
+        return pokeball;
     }
 
     private int numberOfPokeballs() {

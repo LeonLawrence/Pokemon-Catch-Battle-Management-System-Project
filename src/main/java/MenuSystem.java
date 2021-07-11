@@ -5,6 +5,7 @@ public class MenuSystem {
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
     private BattleSystem battleSystem = new BattleSystem();
     private ProgramPauseService programPauseService = new ProgramPauseService();
+    private Pokeball pokeball;
 
     public void startMenu() {
         System.out.println("Type in 1, CATCH WILD POKEMON \nType in 2, DISPLAY INVENTORY \nType in 3, BATTLE");
@@ -16,7 +17,7 @@ public class MenuSystem {
                 Pokemon pokemon = pokemonManagementSystem.findRandomPokemon();
                 Pokeball pokeball = new Pokeball();
                 pokeball.catchPokemon(pokemon);
-                System.out.println(pokeball);
+//                System.out.println(pokeball);
                 pokemonCatchMenu(pokeball);
             } else if (text.equalsIgnoreCase("2")) {
                 System.out.println("displaying everything inside bag");
@@ -28,6 +29,7 @@ public class MenuSystem {
             }
         }
     }
+
 
     public void pokemonCatchMenu(Pokeball pokeball) {
         System.out.println("Type in 1, CONFIRM\nType in 2, BACK TO MAIN MENU");
@@ -50,9 +52,18 @@ public class MenuSystem {
             if (text.equalsIgnoreCase("1")) {
                 System.out.println("starting battle system");
                 programPauseService.consoleLoadingScreen();
-                System.out.println();
-                System.out.println("You have released your pokemon and they are preparing for battle");
-                battleSystem.releasePokemonToBattle();
+                System.out.println("\nYou have encountered a Pokemon.");
+//                System.out.println("\nYou have released your pokemon and they are preparing for battle");
+//
+                pokeball = pokemonManagementSystem.removePokeballFromBag();
+                Pokemon pokemon = pokeball.releasePokemon();
+                String getPokemon = pokemon.pokemonInfo();
+                System.out.println(getPokemon);
+
+
+
+
+
 
             } else if (text.equalsIgnoreCase("2")) {
                 pokemonManagementSystem.getPokeballPokemonDetails();
@@ -62,10 +73,18 @@ public class MenuSystem {
             } else {
                 System.out.println("invalid input, try again");
             }
-
         }
 
+    }
+    public void confirmMenu() {
+        System.out.println("Type in 1, CONFIRM\nType in 2, BACK TO MAIN MENU");
+        String text = scanner.next();
+        if (text.equals("1")) {
 
+           ;
+        } else if (text.equals("2")) {
+
+        }
     }
 }
 

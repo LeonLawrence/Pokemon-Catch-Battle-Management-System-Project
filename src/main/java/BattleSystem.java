@@ -1,27 +1,26 @@
 public class BattleSystem {
-
-    public Pokeball pokeball;
+    private Pokeball pokeball = new Pokeball();
+    private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
+    private Pokemon pokemon;
 
     public void userPokemon() {
         System.out.println("Your Turn To Make A Move");
+        System.out.println("you have attacked");
+        deductHealthFromPokemon();
 
     }
 
     public void cpuPokemon() {
-        System.out.println("Opponent Turn To Make A Move");
+        Pokemon pokemon = pokemonManagementSystem.findRandomPokemon();
 
-    }
-
-    public void deductHealth() {
-
-    }
-
-    public void releasePokemonToBattle() {
-//        pokeball.releasePokemon();
+        System.out.println("CPU: ");
+        pokemon.pokemonInfo();
+        System.out.println("Opponent attacked");
+        pokemon.pokemonInfo();
+        deductHealthFromPokemon();
     }
 
     public void deductHealthFromPokemon() {
-        Pokemon pokemon = new Pokemon();
         pokemon.deductHealth();
     }
 }

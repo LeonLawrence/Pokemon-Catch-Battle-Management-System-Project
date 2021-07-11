@@ -43,6 +43,9 @@ public class PokemonManagementSystem {
     public void addPokeballToBag(Pokeball pokeball) {
         bag1.addPokeball(pokeball);
     }
+    public void removePokeballFromBag(Pokeball pokeball) {
+        bag1.removePokeball(pokeball);
+    }
 
 
     public void displayInventory() {
@@ -52,9 +55,6 @@ public class PokemonManagementSystem {
     public int getPokemonIndexSize() {
         return pokemons.size();
     }
-
-
-
 
 }
 

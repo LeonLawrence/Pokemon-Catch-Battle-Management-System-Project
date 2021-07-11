@@ -27,9 +27,9 @@ public class ProgramPauseService {
     }
 
     public void consoleLoadingScreen() {
-        for(int i  = 0; i < 7; i++) {
+        for(int i  = 0; i < 6; i++) {
             pause_2S();
-            System.out.print("....");
+            System.out.print("...");
         }
     }
 }

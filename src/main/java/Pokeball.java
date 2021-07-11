@@ -12,13 +12,14 @@ public class Pokeball {
         }
     }
 
-    public void releasePokemon(Pokemon pokemon) {
+    public Pokemon releasePokemon() {
         if (pokemon != null) {
             pokemon = null;
             System.out.println("Pokemon Released: " + pokemon.pokemonInfo());
         } else {
             System.out.println("There was nothing in the Pokeball to release");
         }
+        return pokemon;
     }
 
     public void showPokemon() {

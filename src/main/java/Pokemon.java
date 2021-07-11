@@ -7,10 +7,6 @@ public class Pokemon {
         this.health = health;
     }
 
-    public Pokemon() {
-
-    }
-
     public String pokemonInfo() {
         return "NAME: " + name + "\tHEALTH: " + health;
     }
