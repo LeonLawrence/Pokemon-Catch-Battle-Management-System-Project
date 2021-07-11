@@ -1,3 +1,5 @@
+package orignal_code;
+
 public class BattleSystem {
     private Pokeball pokeball = new Pokeball();
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();

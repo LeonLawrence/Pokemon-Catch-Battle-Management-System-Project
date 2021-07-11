@@ -1,4 +1,5 @@
-import java.awt.*;
+package orignal_code;
+
 import java.util.ArrayList;
 
 public class PokemonManagementSystem {
@@ -43,8 +44,9 @@ public class PokemonManagementSystem {
     public void addPokeballToBag(Pokeball pokeball) {
         bag1.addPokeball(pokeball);
     }
-    public void removePokeballFromBag(Pokeball pokeball) {
-        bag1.removePokeball(pokeball);
+
+    public Pokeball removePokeballFromBag(Pokeball pokeball) {
+        return bag1.removePokeball(pokeball);
     }
 
 
@@ -55,6 +57,7 @@ public class PokemonManagementSystem {
     public int getPokemonIndexSize() {
         return pokemons.size();
     }
+
 
 }
 

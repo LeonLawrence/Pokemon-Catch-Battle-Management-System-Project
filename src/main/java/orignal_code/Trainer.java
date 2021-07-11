@@ -1,3 +1,5 @@
+package orignal_code;
+
 public class Trainer {
     private String trainerName;
 

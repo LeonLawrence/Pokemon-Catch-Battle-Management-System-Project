@@ -1,3 +1,5 @@
+package orignal_code;
+
 public class Pokemon {
     private String name;
     private int health;

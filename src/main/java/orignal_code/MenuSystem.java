@@ -1,3 +1,5 @@
+package orignal_code;
+
 import java.util.Scanner;
 
 public class MenuSystem {
@@ -55,11 +57,10 @@ public class MenuSystem {
                 System.out.println("\nYou have encountered a Pokemon.");
 //                System.out.println("\nYou have released your pokemon and they are preparing for battle");
 //
-                pokeball = pokemonManagementSystem.removePokeballFromBag();
+                pokeball = pokemonManagementSystem.removePokeballFromBag(pokeball);
                 Pokemon pokemon = pokeball.releasePokemon();
                 String getPokemon = pokemon.pokemonInfo();
                 System.out.println(getPokemon);
-
 
 
 
@@ -76,12 +77,13 @@ public class MenuSystem {
         }
 
     }
+
     public void confirmMenu() {
         System.out.println("Type in 1, CONFIRM\nType in 2, BACK TO MAIN MENU");
         String text = scanner.next();
         if (text.equals("1")) {
 
-           ;
+            ;
         } else if (text.equals("2")) {
 
         }

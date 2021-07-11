@@ -1,3 +1,5 @@
+package orignal_code;
+
 public class Move {
 
     private int attackPower;
