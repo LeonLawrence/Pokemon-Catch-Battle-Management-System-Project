@@ -14,6 +14,11 @@ public class Pokemon {
     public int deductHealth() {
         return health = health - 20;
     }
+
+
+    public int returningHealth() {
+        return health = 100;
+    }
 }
 
 

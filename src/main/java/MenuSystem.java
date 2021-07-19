@@ -6,7 +6,7 @@ class MenuSystem {
 
     private Scanner scanner = new Scanner(System.in);
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
-    private BattleSystem battleSystem = new BattleSystem();
+    private BattleManagementSystem battleSystem = new BattleManagementSystem();
 
 
     public void startMenu() {
@@ -53,7 +53,7 @@ class MenuSystem {
         while (true) {
             String text = scanner.next();
             if (text.equalsIgnoreCase("1")) {
-                battleSystem.cpuPokemon();
+              battleSystem.battleStart();
             } else if (text.equalsIgnoreCase("2")) {
                 startMenu();
             } else {

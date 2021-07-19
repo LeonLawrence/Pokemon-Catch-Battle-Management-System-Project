@@ -21,10 +21,6 @@ public class PokemonManagementSystem {
         bag.showPokemon();
     }
 
-    public void deductHealthFromPokemon() {
-//        pokemon.deductHealth();
-    }
-
     public Pokemon findRandomPokemon() {
         int pokemonIndex = randomisor.randomPokemonPicker(getPokemonIndexSize());
         return pokemons.get(pokemonIndex);

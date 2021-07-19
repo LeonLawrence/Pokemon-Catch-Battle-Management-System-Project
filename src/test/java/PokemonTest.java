@@ -13,4 +13,5 @@ public class PokemonTest {
         System.out.println(pokemon.pokemonInfo());
         assertEquals("NAME: Pikachu\tHEALTH: 80", pokemon.pokemonInfo());
     }
+
 }

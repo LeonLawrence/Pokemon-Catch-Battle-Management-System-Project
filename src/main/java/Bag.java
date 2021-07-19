@@ -19,12 +19,5 @@ public class Bag {
         for (int i = 0; i < pokeballs.size(); i++) {
             pokeballs.get(i).showPokemon();
         }
-
-
-    }
-
-    public void showFirstPokemonIndexFromPokeball() {
-        pokeballs.size();
-        pokeballs.get(1).showPokemon();
     }
 }
