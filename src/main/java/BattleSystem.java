@@ -11,10 +11,10 @@ public class BattleSystem {
 
     public void cpuPokemon() {
         Pokemon pokemon = pokemonManagementSystem.findRandomPokemon();
-        String getPokemon = pokemon.pokemonInfo();
-        System.out.println("CPU PLAYER: " + getPokemon);
-        pokemonManagementSystem.deductHealthFromPokemon();
-        System.out.println("CPU PLAYER: " + getPokemon);
+        pokemon.pokemonInfo();
+        System.out.println("CPU PLAYER: " + pokemon.pokemonInfo());
+        pokemon.deductHealth();
+        System.out.println("CPU PLAYER: " + pokemon.pokemonInfo());
     }
 
 

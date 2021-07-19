@@ -4,7 +4,6 @@ public class PokemonManagementSystem {
     private ArrayList<Pokemon> pokemons = new ArrayList<>();
     private Randomisor randomisor = new Randomisor();
     private Bag bag = new Bag();
-    public Pokemon pokemon;
 
     PokemonManagementSystem() {
         Pokemon pokemon1 = new Pokemon("Pikachu", 100);
@@ -23,7 +22,7 @@ public class PokemonManagementSystem {
     }
 
     public void deductHealthFromPokemon() {
-        pokemon.deductHealth();
+//        pokemon.deductHealth();
     }
 
     public Pokemon findRandomPokemon() {

@@ -53,7 +53,7 @@ class MenuSystem {
         while (true) {
             String text = scanner.next();
             if (text.equalsIgnoreCase("1")) {
-                battleSystem.userPokemon();
+                battleSystem.cpuPokemon();
             } else if (text.equalsIgnoreCase("2")) {
                 startMenu();
             } else {
