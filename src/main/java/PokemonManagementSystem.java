@@ -29,7 +29,6 @@ public class PokemonManagementSystem {
     public int getPokemonIndexSize() {
         return pokemons.size();
     }
-
 }
 
 

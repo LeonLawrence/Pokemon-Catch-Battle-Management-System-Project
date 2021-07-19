@@ -7,11 +7,16 @@ public class PokemonTest {
     @Test
     public void shouldDeductHealth() {
         Pokemon pokemon = new Pokemon("Pikachu", 100);
-        System.out.println(pokemon.pokemonInfo());
-        assertEquals("NAME: Pikachu\tHEALTH: 100", pokemon.pokemonInfo());
-        pokemon.deductHealth();
-        System.out.println(pokemon.pokemonInfo());
+        pokemon.deductHealth2();
         assertEquals("NAME: Pikachu\tHEALTH: 80", pokemon.pokemonInfo());
+    }
+
+    @Test
+    public void shouldPrintHealthStatus() {
+        Pokemon myPokemon = new Pokemon("Pig", 100);
+        System.out.println(myPokemon.healthStatus());
+        myPokemon.deductHealth2();
+        System.out.println(myPokemon.healthStatus());
     }
 
 }

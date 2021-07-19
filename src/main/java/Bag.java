@@ -6,7 +6,7 @@ public class Bag {
 
     public void addPokeballToBag(Pokeball pokeball) {
         pokeballs.add(pokeball);
-        System.out.println("POKEBALL ADDED TO BAG\n");
+        System.out.println("POKEBALL ADDED TO BAG");
     }
 
     public Pokeball removePokeballFromBag(Pokeball pokeball) {

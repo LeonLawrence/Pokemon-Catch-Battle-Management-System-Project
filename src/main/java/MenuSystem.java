@@ -1,5 +1,3 @@
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
 import java.util.Scanner;
 
 class MenuSystem {
@@ -34,7 +32,7 @@ class MenuSystem {
     }
 
     public void pokemonCatchMenu(Pokeball pokeball) {
-        System.out.println("Type in 1, CONFIRM CAPTURE\nType in 2, BACK TO MAIN MENU");
+        System.out.println("\nType in 1, CONFIRM CAPTURE\nType in 2, BACK TO MAIN MENU");
 
         String text = scanner.next();
         if (text.equals("1")) {
@@ -43,9 +41,10 @@ class MenuSystem {
             startMenu();
         } else if (text.equals("2")) {
             startMenu();
+        } else {
+            System.out.println("ENTRY NOT VALID");
         }
     }
-
 
     public void battleStartMenu() {
         System.out.println("Type in 1, CONFIRM BATTLE\nType in 2, BACK TO MAIN MENU");
@@ -53,13 +52,12 @@ class MenuSystem {
         while (true) {
             String text = scanner.next();
             if (text.equalsIgnoreCase("1")) {
-              battleSystem.battleStart();
+                battleSystem.battleStart();
             } else if (text.equalsIgnoreCase("2")) {
                 startMenu();
             } else {
-                System.out.println("invalid input, try again");
+                System.out.println("ENTRY NOT VALID");
             }
         }
-
     }
 }

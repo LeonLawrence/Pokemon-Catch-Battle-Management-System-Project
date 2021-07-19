@@ -11,14 +11,18 @@ public class Pokemon {
         return "NAME: " + name + "\tHEALTH: " + health;
     }
 
-    public int deductHealth() {
+    public int deductHealth1() {
+        return health = health - 10;
+    }
+
+    public int deductHealth2() {
         return health = health - 20;
     }
 
-
-    public int returningHealth() {
-        return health = 100;
+    public int healthStatus() {
+        return health;
     }
+
 }
 
 
