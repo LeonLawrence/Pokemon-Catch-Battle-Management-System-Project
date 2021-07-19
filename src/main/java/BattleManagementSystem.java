@@ -6,6 +6,7 @@ public class BattleManagementSystem {
     private Scanner scanner = new Scanner(System.in);
     private Pokemon cpuPokemon = pokemonManagementSystem.findRandomPokemon();
     private Pokemon playerPokemon = new Pokemon("UsersTestPokemon", 100);
+    public Bag bag = new Bag();
 
     public void battleStart() {
 
@@ -74,6 +75,18 @@ public class BattleManagementSystem {
         programPauseService.consoleLoadingScreen3S();
         MenuSystem menuSystem = new MenuSystem();
         menuSystem.startMenu();
+    }
+
+    public void battleSystemValidation() {
+        if (!bag.bagIsFull()) {
+            System.out.println("YOU NEED TO OBTAIN A POKEMON BEFORE YOU CAN USE THIS MODE");
+        } else {
+            battleStart();
+        }
+    }
+
+    public void changeBagStatus() {
+        bag.bagStatus = true;
     }
 }
 

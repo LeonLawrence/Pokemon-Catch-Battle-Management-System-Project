@@ -14,6 +14,7 @@ public class PokemonManagementSystem {
     }
 
     public void addPokeballToBag(Pokeball pokeball) {
+        bag.bagIsFull();
         bag.addPokeballToBag(pokeball);
     }
 

@@ -6,7 +6,6 @@ class MenuSystem {
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
     private BattleManagementSystem battleSystem = new BattleManagementSystem();
 
-
     public void startMenu() {
         System.out.println("\nType in 1, CATCH POKEMON\nType in 2, VIEW INVENTORY\nType in 3, FIND BATTLE");
 
@@ -38,6 +37,7 @@ class MenuSystem {
         if (text.equals("1")) {
             System.out.println("\nPOKEMON CAPTURED AND PLACED IN INVENTORY");
             pokemonManagementSystem.addPokeballToBag(pokeball);
+            battleSystem.changeBagStatus();
             startMenu();
         } else if (text.equals("2")) {
             startMenu();
@@ -52,7 +52,7 @@ class MenuSystem {
         while (true) {
             String text = scanner.next();
             if (text.equalsIgnoreCase("1")) {
-                battleSystem.battleStart();
+                battleSystem.battleSystemValidation();
             } else if (text.equalsIgnoreCase("2")) {
                 startMenu();
             } else {

@@ -19,4 +19,11 @@ public class PokemonTest {
         System.out.println(myPokemon.healthStatus());
     }
 
+    @Test
+    public void battleValidation() {
+        Bag bag = new Bag();
+        System.out.println(bag.bagIsFull());
+        System.out.println(!bag.bagIsFull());
+    }
+
 }
