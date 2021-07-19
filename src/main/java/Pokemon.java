@@ -1,5 +1,3 @@
-package orignal_code;
-
 public class Pokemon {
     private String name;
     private int health;
@@ -14,6 +12,8 @@ public class Pokemon {
     }
 
     public int deductHealth() {
-        return health - 20;
+        return health = health - 20;
     }
 }
+
+
