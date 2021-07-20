@@ -1,39 +1,30 @@
 import java.util.ArrayList;
 
 public class Bag {
-    ArrayList<Pokeball> pokeballs = new ArrayList<>();
-    private int counter;
-    private boolean isFull = false;
 
-    public void addPokeball(Pokeball pokeball) {
-        if (!isFull) {
-            pokeballs.add(pokeball);
-            counter++;
-            System.out.println("BAG STORED A POKEBALL");
-        }
-        if (counter == 6) {
-            isFull = true;
-            System.out.println("bag is full");
-        }
+    private ArrayList<Pokeball> pokeballs = new ArrayList<>();
+    public boolean bagStatus;
+
+    public void addPokeballToBag(Pokeball pokeball) {
+        pokeballs.add(pokeball);;
+        System.out.println("POKEBALL ADDED TO BAG");
     }
 
-    public void removePokeball(Pokeball pokeball) {
-        if (counter > 0) {
-            pokeballs.remove(pokeball);
-            counter--;
-            System.out.println("Taken out pokeball from bag");
+    public Pokeball removePokeballFromBag(Pokeball pokeball) {
+        pokeballs.remove(pokeball);
+        System.out.println("POKEBALL REMOVED FROM BAG");
+        return pokeball;
+    }
+
+    public boolean bagIsFull() {
+        return bagStatus;
+    }
+
+
+
+    public void showPokemon() {
+        for (int i = 0; i < pokeballs.size(); i++) {
+            pokeballs.get(i).showPokemon();
         }
-        if (counter == 0) {
-            System.out.println("Bag is empty");
-        }
     }
-
-    private int numberOfPokeballs() {
-        return pokeballs.size();
-    }
-
-    public void showPokeballInBag() {
-        System.out.println("Number of pokeballs in bag: " + numberOfPokeballs());
-    }
-
 }
