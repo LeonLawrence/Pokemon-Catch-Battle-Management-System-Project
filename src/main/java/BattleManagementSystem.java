@@ -4,9 +4,10 @@ public class BattleManagementSystem {
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
     private ProgramPauseService programPauseService = new ProgramPauseService();
     private Scanner scanner = new Scanner(System.in);
-    private Pokemon cpuPokemon = pokemonManagementSystem.findRandomPokemon();
-    private Pokemon playerPokemon = new Pokemon("UsersTestPokemon", 100);
     public Bag bag = new Bag();
+
+    private Pokemon cpuPokemon = pokemonManagementSystem.findRandomPokemon();
+    private Pokeball playerPokemon = bag.findRandomPokemonFromInventory();
 
     public void battleStart() {
 
@@ -16,7 +17,7 @@ public class BattleManagementSystem {
         while (true) {
             userPokemon();
             cpuPokemon();
-            if (playerPokemon.healthStatus() <= 0) {
+            if (playerPokemon.pokemon.healthStatus() <= 0) {
                 System.out.println("\nYOU LOST THE POKEMON BATTLE");
                 defeatLoadingMenu();
             } else if (cpuPokemon.healthStatus() <= 0) {
@@ -36,7 +37,7 @@ public class BattleManagementSystem {
 
     public void displayUpdatedPokemonHealth() {
         System.out.println("\n**UPDATED POKEMON DETAILS BELOW***");
-        System.out.println("PLAYER POKEMON: " + playerPokemon.pokemonInfo());
+        System.out.println("PLAYER POKEMON: " + playerPokemon.pokemon.pokemonInfo());
         System.out.println("CPU POKEMON: " + cpuPokemon.pokemonInfo());
     }
 
@@ -61,7 +62,7 @@ public class BattleManagementSystem {
             String text = scanner.next();
             if (text.equals("1")) {
                 System.out.println("\nCPU POKEMON IS NOW ATTACKING");
-                playerPokemon.deductHealth1();
+                playerPokemon.pokemon.deductHealth1();
                 displayUpdatedPokemonHealth();
                 break;
             } else {
