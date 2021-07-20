@@ -1,5 +1,6 @@
 public class Pokeball {
-    public Pokemon pokemon;
+
+    private Pokemon pokemon;
 
     public void catchPokemon(Pokemon pokemon) {
         this.pokemon = pokemon;
@@ -9,5 +10,4 @@ public class Pokeball {
     public void showPokemon() {
         System.out.println(pokemon.pokemonInfo());
     }
-
 }

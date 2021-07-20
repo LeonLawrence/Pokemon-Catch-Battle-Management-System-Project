@@ -17,7 +17,6 @@ class MenuSystem {
                 Pokeball pokeball = new Pokeball();
                 pokeball.catchPokemon(pokemon);
                 pokemonCatchMenu(pokeball);
-
             } else if (text.equals("2")) {
                 System.out.println("YOUR INVENTORY: ");
                 pokemonManagementSystem.getPokeballPokemonDetail();
@@ -32,7 +31,6 @@ class MenuSystem {
 
     public void pokemonCatchMenu(Pokeball pokeball) {
         System.out.println("\nType in 1, CONFIRM CAPTURE\nType in 2, BACK TO MAIN MENU");
-
         String text = scanner.next();
         if (text.equals("1")) {
             System.out.println("\nPOKEMON CAPTURED AND PLACED IN INVENTORY");
@@ -48,7 +46,6 @@ class MenuSystem {
 
     public void battleStartMenu() {
         System.out.println("Type in 1, CONFIRM BATTLE\nType in 2, BACK TO MAIN MENU");
-
         while (true) {
             String text = scanner.next();
             if (text.equalsIgnoreCase("1")) {

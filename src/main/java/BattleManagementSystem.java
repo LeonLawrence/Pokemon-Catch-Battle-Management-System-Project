@@ -4,20 +4,18 @@ public class BattleManagementSystem {
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
     private ProgramPauseService programPauseService = new ProgramPauseService();
     private Scanner scanner = new Scanner(System.in);
-    public Bag bag = new Bag();
+    private Bag bag = new Bag();
 
     private Pokemon cpuPokemon = pokemonManagementSystem.findRandomPokemon();
-    private Pokeball playerPokemon = bag.findRandomPokemonFromInventory();
+    private Pokemon playerPokemon = pokemonManagementSystem.findRandomPokemon();
 
     public void battleStart() {
-
         displayStartBattleDetailsMessage();
         displayUpdatedPokemonHealth();
-
         while (true) {
             userPokemon();
             cpuPokemon();
-            if (playerPokemon.pokemon.healthStatus() <= 0) {
+            if (playerPokemon.healthStatus() <= 0) {
                 System.out.println("\nYOU LOST THE POKEMON BATTLE");
                 defeatLoadingMenu();
             } else if (cpuPokemon.healthStatus() <= 0) {
@@ -37,7 +35,7 @@ public class BattleManagementSystem {
 
     public void displayUpdatedPokemonHealth() {
         System.out.println("\n**UPDATED POKEMON DETAILS BELOW***");
-        System.out.println("PLAYER POKEMON: " + playerPokemon.pokemon.pokemonInfo());
+        System.out.println("PLAYER POKEMON: " + playerPokemon.pokemonInfo());
         System.out.println("CPU POKEMON: " + cpuPokemon.pokemonInfo());
     }
 
@@ -62,7 +60,7 @@ public class BattleManagementSystem {
             String text = scanner.next();
             if (text.equals("1")) {
                 System.out.println("\nCPU POKEMON IS NOW ATTACKING");
-                playerPokemon.pokemon.deductHealth1();
+                playerPokemon.deductHealth1();
                 displayUpdatedPokemonHealth();
                 break;
             } else {
@@ -81,14 +79,15 @@ public class BattleManagementSystem {
     public void battleSystemValidation() {
         if (!bag.bagIsFull()) {
             System.out.println("YOU NEED TO OBTAIN A POKEMON BEFORE YOU CAN USE THIS MODE");
+            MenuSystem menuSystem = new MenuSystem();
+            menuSystem.startMenu();
         } else {
             battleStart();
         }
     }
 
     public void changeBagStatus() {
-        bag.bagStatus = true;
+        bag.changeBagStatus();
     }
 }
-
 
