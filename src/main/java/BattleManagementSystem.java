@@ -4,15 +4,14 @@ public class BattleManagementSystem {
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
     private ProgramPauseService programPauseService = new ProgramPauseService();
     private Scanner scanner = new Scanner(System.in);
+    private Bag bag = new Bag();
+
     private Pokemon cpuPokemon = pokemonManagementSystem.findRandomPokemon();
-    private Pokemon playerPokemon = new Pokemon("UsersTestPokemon", 100);
-    public Bag bag = new Bag();
+    private Pokemon playerPokemon = pokemonManagementSystem.findRandomPokemon();
 
     public void battleStart() {
-
         displayStartBattleDetailsMessage();
         displayUpdatedPokemonHealth();
-
         while (true) {
             userPokemon();
             cpuPokemon();
@@ -80,14 +79,15 @@ public class BattleManagementSystem {
     public void battleSystemValidation() {
         if (!bag.bagIsFull()) {
             System.out.println("YOU NEED TO OBTAIN A POKEMON BEFORE YOU CAN USE THIS MODE");
+            MenuSystem menuSystem = new MenuSystem();
+            menuSystem.startMenu();
         } else {
             battleStart();
         }
     }
 
     public void changeBagStatus() {
-        bag.bagStatus = true;
+        bag.changeBagStatus();
     }
 }
-
 

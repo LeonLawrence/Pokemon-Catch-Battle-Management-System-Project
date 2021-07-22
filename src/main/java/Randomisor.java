@@ -4,4 +4,3 @@ public class Randomisor {
         return (int) (Math.random() * size);
     }
 }
-
