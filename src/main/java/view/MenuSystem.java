@@ -1,3 +1,8 @@
+package view;
+
+import controller.PokemonManagementSystem;
+import view.BattleManagementSystem;
+
 import java.util.Scanner;
 
 class MenuSystem {

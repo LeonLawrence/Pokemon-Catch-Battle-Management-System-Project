@@ -1,3 +1,8 @@
+package view;
+
+import controller.PokemonManagementSystem;
+import model.Bag;
+
 import java.util.Scanner;
 
 public class BattleManagementSystem {

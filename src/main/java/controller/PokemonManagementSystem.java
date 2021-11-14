@@ -1,3 +1,7 @@
+package controller;
+
+import model.Bag;
+
 import java.util.ArrayList;
 
 public class PokemonManagementSystem {

@@ -1,3 +1,5 @@
+import model.Bag;
+import model.Pokemon;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

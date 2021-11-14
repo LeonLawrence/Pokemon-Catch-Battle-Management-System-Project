@@ -1,3 +1,5 @@
+package service;
+
 public class ProgramPauseService {
 
     public static void sleep(int time) {

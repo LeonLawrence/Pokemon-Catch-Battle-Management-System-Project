@@ -1,3 +1,5 @@
+package model;
+
 public class Pokemon {
     private String name;
     private int health;

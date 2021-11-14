@@ -1,3 +1,5 @@
+package model;
+
 public class Pokeball {
     public Pokemon pokemon;
 
