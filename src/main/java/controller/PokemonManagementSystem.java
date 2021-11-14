@@ -2,10 +2,6 @@ package controller;
 
 import model.Bag;
 import model.Pokeball;
-import model.Pokemon;
-import service.Randomisor;
-
-import java.util.ArrayList;
 
 public class PokemonManagementSystem {
 
