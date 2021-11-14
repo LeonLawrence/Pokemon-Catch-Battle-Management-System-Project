@@ -1,15 +1,20 @@
 package view;
 
 import controller.PokemonManagementSystem;
+import database.Database;
 import model.Bag;
+import model.Pokemon;
+import service.ProgramPauseService;
 
 import java.util.Scanner;
 
-public class BattleManagementSystem {
+public class BattleSystemView {
+
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
+    private Database database = new Database();
     private ProgramPauseService programPauseService = new ProgramPauseService();
     private Scanner scanner = new Scanner(System.in);
-    private Pokemon cpuPokemon = pokemonManagementSystem.findRandomPokemon();
+    private Pokemon cpuPokemon = database.findRandomPokemon();
     private Pokemon playerPokemon = new Pokemon("UsersTestPokemon", 100);
     public Bag bag = new Bag();
 

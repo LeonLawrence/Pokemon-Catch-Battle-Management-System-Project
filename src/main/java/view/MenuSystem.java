@@ -1,15 +1,18 @@
 package view;
 
 import controller.PokemonManagementSystem;
-import view.BattleManagementSystem;
+import database.Database;
+import model.Pokeball;
+import model.Pokemon;
 
 import java.util.Scanner;
 
-class MenuSystem {
+public class MenuSystem {
 
     private Scanner scanner = new Scanner(System.in);
+    private Database database = new Database();
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
-    private BattleManagementSystem battleSystem = new BattleManagementSystem();
+    private BattleSystemView battleSystem = new BattleSystemView();
 
     public void startMenu() {
         System.out.println("\nType in 1, CATCH POKEMON\nType in 2, VIEW INVENTORY\nType in 3, FIND BATTLE");
@@ -18,7 +21,7 @@ class MenuSystem {
             String text = scanner.next();
 
             if (text.equals("1")) {
-                Pokemon pokemon = pokemonManagementSystem.findRandomPokemon();
+                Pokemon pokemon = database.findRandomPokemon();
                 Pokeball pokeball = new Pokeball();
                 pokeball.catchPokemon(pokemon);
                 pokemonCatchMenu(pokeball);
