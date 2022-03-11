@@ -1,3 +1,10 @@
+package controller;
+
+import model.Bag;
+import model.Pokeball;
+import model.Pokemon;
+import service.Randomisor;
+
 import java.util.ArrayList;
 
 public class PokemonManagementSystem {
@@ -5,7 +12,7 @@ public class PokemonManagementSystem {
     private Randomisor randomisor = new Randomisor();
     private Bag bag = new Bag();
 
-    PokemonManagementSystem() {
+    public PokemonManagementSystem() {
         Pokemon pokemon1 = new Pokemon("Pikachu", 100);
         Pokemon pokemon2 = new Pokemon("Charizard", 100);
         Pokemon pokemon3 = new Pokemon("Eevee", 100);

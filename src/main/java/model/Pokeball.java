@@ -1,3 +1,7 @@
+package model;
+
+import model.Pokemon;
+
 public class Pokeball {
 
     private Pokemon pokemon;

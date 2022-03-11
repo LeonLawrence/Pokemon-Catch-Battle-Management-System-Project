@@ -1,6 +1,12 @@
+package view;
+
+import controller.PokemonManagementSystem;
+import model.Pokeball;
+import model.Pokemon;
+
 import java.util.Scanner;
 
-class MenuSystem {
+public class MenuSystem {
 
     private Scanner scanner = new Scanner(System.in);
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();

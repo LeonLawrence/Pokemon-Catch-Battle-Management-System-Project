@@ -1,3 +1,5 @@
+package model;
+
 public class Pokemon {
     private String name;
     private int health;
@@ -22,7 +24,6 @@ public class Pokemon {
     public int healthStatus() {
         return health;
     }
-
 }
 
 

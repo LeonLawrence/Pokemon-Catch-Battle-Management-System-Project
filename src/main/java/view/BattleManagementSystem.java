@@ -1,8 +1,15 @@
+package view;
+
+import controller.PokemonManagementSystem;
+import model.Bag;
+import model.Pokemon;
+import service.Randomisor;
+
 import java.util.Scanner;
 
 public class BattleManagementSystem {
     private PokemonManagementSystem pokemonManagementSystem = new PokemonManagementSystem();
-    private ProgramPauseService programPauseService = new ProgramPauseService();
+    private Randomisor.ProgramPauseService programPauseService = new Randomisor.ProgramPauseService();
     private Scanner scanner = new Scanner(System.in);
     private Bag bag = new Bag();
 
